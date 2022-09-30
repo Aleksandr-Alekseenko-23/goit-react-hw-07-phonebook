@@ -1,20 +1,62 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { getContacts, addContacts, deleteContacts } from './usersOperations';
 
-const usersInitialState = [];
 const userSlice = createSlice({
-  name: 'users',
-  initialState: { users: usersInitialState },
-  reducers: {
-    addUsers(state, { payload }) {
-      state.users.push({ ...payload, id: nanoid() });
+  name: 'contacts',
+  initialState: {
+    contacts: [],
+    isLoading: false,
+    error: null,
+  },
+  extraReducers: {
+    [getContacts.pending]: state => ({
+      ...state,
+      isLoading: true,
+      error: null,
+    }),
+    [getContacts.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.contacts = action.payload;
     },
+    [getContacts.rejected]: (state, action) => ({
+      ...state,
+      isLoading: false,
+      error: action.payload,
+    }),
 
-    deleteUsers(state, action) {
-      const index = state.users.findIndex(user => user.id === action.payload);
-      state.users.splice(index, 1);
+    [addContacts.pending]: state => ({
+      ...state,
+      isLoading: true,
+      error: null,
+    }),
+    [addContacts.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.contacts = [...state.contacts, action.payload];
     },
+    [addContacts.rejected]: (state, action) => ({
+      ...state,
+      isLoading: false,
+      error: action.payload,
+    }),
+
+    [deleteContacts.pending]: state => ({
+      ...state,
+      isLoading: true,
+      error: null,
+    }),
+    [deleteContacts.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.contacts = state.contacts.filter(el => el.id !== action.payload.id);
+    },
+    [deleteContacts.rejected]: (state, action) => ({
+      ...state,
+      isLoading: false,
+      error: action.payload,
+    }),
   },
 });
 
-export const { addUsers, deleteUsers } = userSlice.actions;
-export const userReducer = userSlice.reducer;
+export const usersReducer = userSlice.reducer;

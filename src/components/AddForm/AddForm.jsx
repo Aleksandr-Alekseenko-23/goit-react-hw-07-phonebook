@@ -6,7 +6,7 @@ import {
 } from './AddForm.styled.js';
 import Icon from './../../Assets/img/plus.svg';
 import { useDispatch } from 'react-redux';
-import { addUsers } from '../../redux/userSlice';
+import { addContacts } from '../../redux/usersOperations';
 
 export const AddForm = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const AddForm = () => {
   const onHandleSubmit = e => {
     e.preventDefault();
     const { nameUser, number } = e.target.elements;
-    dispatch(addUsers({ name: nameUser.value, number: number.value }));
+    dispatch(addContacts({ name: nameUser.value, number: number.value }));
     e.target.reset();
   };
 
