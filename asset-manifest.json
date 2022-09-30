@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-06-phonebook/static/css/main.ce302afd.css",
-    "main.js": "/goit-react-hw-06-phonebook/static/js/main.b5428877.js",
-    "static/media/BookshelfWallpaper.jpg": "/goit-react-hw-06-phonebook/static/media/BookshelfWallpaper.cf2085322352ae12b5c1.jpg",
-    "static/media/Delete.svg": "/goit-react-hw-06-phonebook/static/media/Delete.f2329dc8749a49891e5633becc8d5bc3.svg",
-    "static/media/plus.svg": "/goit-react-hw-06-phonebook/static/media/plus.47716c5d1e4f97824b77013575f7b2b6.svg",
-    "index.html": "/goit-react-hw-06-phonebook/index.html",
-    "main.ce302afd.css.map": "/goit-react-hw-06-phonebook/static/css/main.ce302afd.css.map",
-    "main.b5428877.js.map": "/goit-react-hw-06-phonebook/static/js/main.b5428877.js.map"
+    "main.css": "/goit-react-hw-07-phonebook/static/css/main.bbc2f175.css",
+    "main.js": "/goit-react-hw-07-phonebook/static/js/main.61cff8c4.js",
+    "static/media/BookshelfWallpaper.jpg": "/goit-react-hw-07-phonebook/static/media/BookshelfWallpaper.cf2085322352ae12b5c1.jpg",
+    "static/media/Delete.svg": "/goit-react-hw-07-phonebook/static/media/Delete.f2329dc8749a49891e5633becc8d5bc3.svg",
+    "static/media/plus.svg": "/goit-react-hw-07-phonebook/static/media/plus.47716c5d1e4f97824b77013575f7b2b6.svg",
+    "index.html": "/goit-react-hw-07-phonebook/index.html",
+    "main.bbc2f175.css.map": "/goit-react-hw-07-phonebook/static/css/main.bbc2f175.css.map",
+    "main.61cff8c4.js.map": "/goit-react-hw-07-phonebook/static/js/main.61cff8c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce302afd.css",
-    "static/js/main.b5428877.js"
+    "static/css/main.bbc2f175.css",
+    "static/js/main.61cff8c4.js"
   ]
 }
